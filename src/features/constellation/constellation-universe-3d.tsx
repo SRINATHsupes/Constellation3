@@ -40,21 +40,21 @@ const SUBJECTS: Subject[] = [
     id: 'vedic',
     title: 'VEDIC MATHS',
     subtitle: 'Numbers · Patterns · Mental Power',
-    color: '#C8B5E8',
+    color: '#B9A7F5',
     position: [-3.0, 1.2, -0.5],
   },
   {
     id: 'arts',
     title: 'ARTS',
     subtitle: 'Drawing · Create · Imagine',
-    color: '#FFB7C5',
+    color: '#F3A6C7',
     position: [3.0, -1.2, 0.3],
   },
   {
     id: 'tech',
     title: 'TECH',
     subtitle: 'Build · Machines · Invent',
-    color: '#BFD9F2',
+    color: '#8FC9E8',
     position: [3.0, 1.2, 0.1],
   },
 ];
@@ -66,7 +66,7 @@ const DISCOVERIES: Discovery[] = [
     title: 'NUMBER SENSE',
     subtitle: 'Discover patterns in numbers',
     route: '/play/vedic-escape',
-    color: '#C8B5E8',
+    color: '#B9A7F5',
     position: [-3.0, 1.2, -0.5],
     unlocked: true,
   },
@@ -77,7 +77,7 @@ const DISCOVERIES: Discovery[] = [
     title: 'ARTS',
     subtitle: 'Draw · Observe · Create',
     route: '/play/arts-drawing',
-    color: '#FFB7C5',
+    color: '#F3A6C7',
     position: [3.0, -1.2, 0.3],
     unlocked: true,
   },
@@ -88,7 +88,7 @@ const DISCOVERIES: Discovery[] = [
     title: 'TECH',
     subtitle: 'Build · Machines · Invent',
     route: '/play/manufacturing',
-    color: '#BFD9F2',
+    color: '#8FC9E8',
     position: [3.0, 1.2, 0.1],
     unlocked: true,
   },
@@ -630,7 +630,7 @@ function createManufacturingStructure(
   const center = new THREE.Mesh(
     new THREE.BoxGeometry(0.16, 0.16, 0.16),
     new THREE.MeshBasicMaterial({
-      color: '#FFE4D4',
+      color: '#FFE0C7',
     }),
   );
 
@@ -1229,7 +1229,7 @@ export function ConstellationUniverse3D() {
 
     const scene = new THREE.Scene();
 
-    scene.background = new THREE.Color('#020713');
+    scene.background = new THREE.Color('#FFFDF8');
 
     sceneRef.current = scene;
 
@@ -1271,10 +1271,10 @@ export function ConstellationUniverse3D() {
     );
 
     const backgroundMaterial = new THREE.PointsMaterial({
-      color: '#AFCBEE',
-      size: 0.025,
+      color: '#D8D2EA',
+      size: 0.018,
       transparent: true,
-      opacity: 0.55,
+      opacity: 0.28,
     });
 
     const backgroundStars = new THREE.Points(
@@ -1380,35 +1380,35 @@ export function ConstellationUniverse3D() {
     };
 
     const subjectColors: Record<SubjectId, string> = {
-      vedic: '#E8DFFF',
-      arts: '#FFDCE8',
-      tech: '#BFD9F2',
+      vedic: '#B9A7F5',
+      arts: '#F3A6C7',
+      tech: '#8FC9E8',
     };
 
     const nodeColors: Record<SubjectId, string[]> = {
       vedic: [
-        '#FFFFFF',
-        '#E8DFFF',
+        '#FFF3D6',
+        '#B9A7F5',
         '#DDEBFF',
-        '#FFFFFF',
+        '#FFF9F0',
         '#FFF0C7',
-        '#FFFFFF',
+        '#FFF9F0',
       ],
       arts: [
-        '#FFFFFF',
-        '#FFDCE8',
+        '#FFF3D6',
+        '#F3A6C7',
         '#FFF0C7',
-        '#FFFFFF',
+        '#FFF9F0',
         '#E6F5EC',
-        '#FFFFFF',
+        '#FFF9F0',
       ],
       tech: [
-        '#FFFFFF',
-        '#BFD9F2',
+        '#FFF9F0',
+        '#8FC9E8',
         '#E8DFFF',
-        '#FFFFFF',
+        '#FFF9F0',
         '#F2C96D',
-        '#FFFFFF',
+        '#FFF9F0',
       ],
     };
 
@@ -1516,7 +1516,7 @@ export function ConstellationUniverse3D() {
     const core = new THREE.Mesh(
       new THREE.IcosahedronGeometry(0.28, 1),
       new THREE.MeshBasicMaterial({
-        color: '#EAF3FF',
+        color: '#FFF3D6',
         transparent: true,
         opacity: 0.9,
       }),
@@ -1881,7 +1881,7 @@ export function ConstellationUniverse3D() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#020713',
+    backgroundColor: '#FFFDF8',
   },
 
   glView: {
@@ -1947,7 +1947,7 @@ const styles = StyleSheet.create({
     width: 1.5,
     height: 1.5,
     borderRadius: 1,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#FFF9F0',
   },
 
   srName: {
@@ -1961,7 +1961,7 @@ const styles = StyleSheet.create({
     fontSize: 5,
     letterSpacing: 0.7,
     fontWeight: '700',
-    color: '#FFFFFF',
+    color: '#FFF9F0',
     opacity: 0.72,
   },
 
@@ -1975,7 +1975,7 @@ const styles = StyleSheet.create({
   },
 
   title: {
-    color: '#EAF3FF',
+    color: '#FFF3D6',
     fontSize: 18,
     fontWeight: '900',
     letterSpacing: 5,
@@ -1989,7 +1989,7 @@ const styles = StyleSheet.create({
   },
 
   level: {
-    color: '#8798B4',
+    color: '#A9A4C2',
     fontSize: 10,
     fontWeight: '700',
     letterSpacing: 2,
@@ -2004,7 +2004,7 @@ const styles = StyleSheet.create({
   },
 
   legendText: {
-    color: '#71829D',
+    color: '#8F89AA',
     fontSize: 8,
     fontWeight: '700',
     letterSpacing: 1,
@@ -2034,20 +2034,20 @@ const styles = StyleSheet.create({
   },
 
   selectionTitle: {
-    color: '#FFFFFF',
+    color: '#FFF9F0',
     fontSize: 19,
     fontWeight: '900',
     letterSpacing: 1,
   },
 
   selectionSubtitle: {
-    color: '#B8C6DA',
+    color: '#D8D2EA',
     fontSize: 12,
     marginTop: 3,
   },
 
   selectionStatus: {
-    color: '#7E91AE',
+    color: '#9D97B5',
     fontSize: 9,
     fontWeight: '800',
     letterSpacing: 0.6,
@@ -2073,14 +2073,14 @@ const styles = StyleSheet.create({
   },
 
   exploreButtonText: {
-    color: '#07101F',
+    color: '#211D38',
     fontSize: 13,
     fontWeight: '900',
     letterSpacing: 1,
   },
 
   hint: {
-    color: '#72839D',
+    color: '#918BAA',
     fontSize: 10,
     marginTop: 8,
     textAlign: 'center',
